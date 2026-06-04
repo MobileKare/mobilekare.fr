@@ -31,6 +31,7 @@
       backdrop-filter: blur(8px);
       border-bottom: 1px solid #eee;
     }
+    nav > a:first-child { display: block; }
     .logo { font-size: 1.2rem; font-weight: 600; letter-spacing: -0.02em; }
     .logo span { color: #2563eb; }
     nav ul { list-style: none; display: flex; gap: 2rem; align-items: center; }
@@ -207,6 +208,7 @@
 
     @media (max-width: 768px) {
       nav ul { display: none; }
+      nav > a:first-child { position: absolute; left: 50%; transform: translateX(-50%); }
       .zone-wrapper, .rdv-wrapper { grid-template-columns: 1fr; gap: 2rem; }
       .form-row { grid-template-columns: 1fr; }
       .hero-stats { gap: 1.5rem; }
