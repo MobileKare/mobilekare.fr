@@ -358,6 +358,8 @@
 
       <div class="form-card">
         <form id="rdvForm" action="https://formspree.io/f/xzdqzewy" method="POST">
+          <input type="hidden" name="_next" value="https://mobilekare.fr/#rendez-vous">
+          <input type="hidden" name="_subject" value="Nouvelle demande de rendez-vous MobileKare">
           <div class="form-row">
             <div class="form-group">
               <label>Prénom *</label>
@@ -427,19 +429,11 @@
 </footer>
 
 <script>
-  document.getElementById('rdvForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    var form = this;
-    fetch(form.action, {
-      method: 'POST',
-      body: new FormData(form),
-      headers: { 'Accept': 'application/json' }
-    }).then(function(r) {
-      if (r.ok) {
-        form.style.display = 'none';
-        document.getElementById('fSuccess').style.display = 'block';
-      }
-    });
+  document.getElementById('rdvForm').addEventListener('submit', function() {
+    setTimeout(function() {
+      document.getElementById('rdvForm').style.display = 'none';
+      document.getElementById('fSuccess').style.display = 'block';
+    }, 500);
   });
 </script>
 
