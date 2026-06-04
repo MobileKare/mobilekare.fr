@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MobileKare – Réparation à domicile & atelier</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/MobileKare/mobilekare.fr/main/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css"/>
@@ -217,7 +217,7 @@
 
 <!-- NAV -->
 <nav>
-  <a href="#accueil"><img src="Logo.png" alt="MobileKare" style="height:40px;"></a>
+  <a href="#accueil"><img src="https://raw.githubusercontent.com/MobileKare/mobilekare.fr/main/Logo.png" alt="MobileKare" style="height:80px;"></a>
   <ul>
     <li><a href="#accueil">Accueil</a></li>
     <li><a href="#services">Services</a></li>
@@ -361,7 +361,6 @@
 
       <div class="form-card">
         <form id="rdvForm" action="https://formspree.io/f/xzdqzewy" method="POST">
-          <input type="hidden" name="_next" value="https://mobilekare.fr/#rendez-vous">
           <input type="hidden" name="_subject" value="Nouvelle demande de rendez-vous MobileKare">
           <div class="form-row">
             <div class="form-group">
@@ -427,16 +426,35 @@
 
 <!-- FOOTER -->
 <footer>
-  <a href="#accueil"><img src="Logo.png" alt="MobileKare" style="height:36px;"></a>
+  <a href="#accueil"><img src="https://raw.githubusercontent.com/MobileKare/mobilekare.fr/main/Logo.png" alt="MobileKare" style="height:72px;"></a>
   <p>© 2026 MobileKare · Réparation à domicile & en atelier · Villeneuve-de-Marsan</p>
 </footer>
 
 <script>
-  document.getElementById('rdvForm').addEventListener('submit', function() {
-    setTimeout(function() {
-      document.getElementById('rdvForm').style.display = 'none';
-      document.getElementById('fSuccess').style.display = 'block';
-    }, 500);
+  document.getElementById('rdvForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var form = this;
+    var btn = form.querySelector('button[type=submit]');
+    btn.textContent = 'Envoi en cours…';
+    btn.disabled = true;
+    fetch('https://formspree.io/f/xzdqzewy', {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function(r) {
+      if (r.ok) {
+        form.style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'block';
+      } else {
+        btn.textContent = 'Envoyer ma demande';
+        btn.disabled = false;
+        alert('Une erreur est survenue, veuillez réessayer.');
+      }
+    }).catch(function() {
+      btn.textContent = 'Envoyer ma demande';
+      btn.disabled = false;
+      alert('Une erreur est survenue, veuillez réessayer.');
+    });
   });
 </script>
 
