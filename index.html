@@ -6,6 +6,7 @@
   <title>MobileKare – Réparation à domicile & atelier</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css"/>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -326,10 +327,7 @@
           </div>
         </div>
       </div>
-      <div class="zone-visual">
-        <span>📍</span>
-        <p>Villeneuve-de-Marsan</p>
-      </div>
+      <div id="map" style="height:450px; border-radius:10px; border:1px solid #e0e7ff; overflow:hidden; z-index:1;"></div>
     </div>
   </div>
 </section>
@@ -435,5 +433,26 @@
   });
 </script>
 
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  window.addEventListener('load', function() {
+    var centerLat = 43.8964, centerLng = -0.3094;
+    var map = L.map('map', { zoomControl: true, scrollWheelZoom: false }).setView([centerLat, centerLng], 10);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap'
+    }).addTo(map);
+    L.circle([centerLat, centerLng], {
+      radius: 30000,
+      color: '#2563eb', fillColor: '#2563eb',
+      fillOpacity: 0.08, weight: 2
+    }).addTo(map);
+    var icon = L.divIcon({
+      html: '<div style="background:#2563eb;width:14px;height:14px;border-radius:50%;border:3px solid #fff;box-shadow:0 0 4px rgba(0,0,0,0.4);"></div>',
+      className: '', iconSize:[14,14], iconAnchor:[7,7], popupAnchor:[0,-10]
+    });
+    L.marker([centerLat, centerLng], { icon: icon }).addTo(map)
+      .bindPopup('<strong>MobileKare</strong><br>Villeneuve-de-Marsan').openPopup();
+  });
+</script>
 </body>
 </html>
