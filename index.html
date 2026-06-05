@@ -3,7 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MobileKare – Réparation à domicile & atelier</title>
+  <title>MobileKare – Réparation à domicile & atelier | Villeneuve-de-Marsan</title>
+  <meta name="description" content="MobileKare répare vos smartphones, tablettes, montres connectées et consoles de jeux à domicile ou en atelier à Villeneuve-de-Marsan. Intervention rapide dans un rayon de 30 km.">
+  <meta name="keywords" content="réparation téléphone, réparation smartphone, réparation tablette, réparation console, réparation montre connectée, Villeneuve-de-Marsan, Landes, à domicile">
+  <meta name="author" content="MobileKare">
+  <link rel="canonical" href="https://mobilekare.fr">
+  <meta property="og:title" content="MobileKare – Réparation à domicile & atelier">
+  <meta property="og:description" content="Réparation de smartphones, tablettes, montres connectées et consoles à Villeneuve-de-Marsan. Intervention à domicile dans un rayon de 30 km.">
+  <meta property="og:url" content="https://mobilekare.fr">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://raw.githubusercontent.com/MobileKare/mobilekare.fr/main/hero.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MobileKare – Réparation à domicile & atelier">
+  <meta name="twitter:description" content="Réparation de smartphones, tablettes, montres connectées et consoles à Villeneuve-de-Marsan.">
   <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/MobileKare/mobilekare.fr/main/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -165,7 +177,7 @@
     .zone-visual p { font-size: 0.85rem; color: #888; }
 
     /* RDV */
-    #rendez-vous { background: #f8f8f8; }
+    #devis { background: #f8f8f8; }
     .rdv-wrapper {
       display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: start;
     }
@@ -235,12 +247,8 @@
       flex-direction: column; gap: 0;
     }
     .mobile-menu.open { display: flex; }
-    .mobile-menu a {
-      text-decoration: none; color: #111;
-      font-size: 1rem; font-weight: 500;
-      padding: 0.8rem 0; border-bottom: 1px solid #f0f0f0;
-    }
-    .mobile-menu a:last-child { border-bottom: none; color: #2563eb; }
+    .mobile-menu a { text-decoration: none; color: #111; font-size: 1rem; font-weight: 500; padding: 0.8rem 0; border-bottom: 1px solid #f0f0f0; }
+    .mobile-menu a.mobile-cta { border: none; margin-top: 0.5rem; background: #111; color: #fff; text-align: center; padding: 0.5rem 1rem; border-radius: 6px; font-weight: 600; font-size: 0.85rem; display: inline-block; align-self: flex-start; }
 
     @media (max-width: 768px) {
       nav ul { display: none; }
@@ -264,7 +272,7 @@
     <li><a href="#accueil">Accueil</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#zone">Zone</a></li>
-    <li><a href="#rendez-vous" class="nav-cta">Rendez-vous</a></li>
+    <li><a href="#devis" class="nav-cta">Devis</a></li>
   </ul>
   <button class="hamburger" id="hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
@@ -276,7 +284,7 @@
   <a href="#accueil" class="mobile-link">Accueil</a>
   <a href="#services" class="mobile-link">Services</a>
   <a href="#zone" class="mobile-link">Zone</a>
-  <a href="#rendez-vous" class="mobile-link">Rendez-vous</a>
+  <a href="#devis" class="mobile-link mobile-cta">Devis</a>
 </div>
 
 <!-- HERO -->
@@ -287,7 +295,7 @@
       <h1>Vos appareils<br>réparés rapidement</h1>
       <p class="hero-sub">Téléphones, tablettes, montres connectées et consoles de jeux. Intervention à domicile ou dépôt en atelier à Villeneuve-de-Marsan.</p>
       <div class="hero-btns">
-        <a href="#rendez-vous" class="btn-dark">Prendre rendez-vous</a>
+        <a href="#devis" class="btn-dark">Demander un devis</a>
         <a href="#services" class="btn-outline">Nos services</a>
       </div>
       <div class="hero-stats">
@@ -392,13 +400,13 @@
 </section>
 
 <!-- RDV -->
-<section id="rendez-vous">
+<section id="devis">
   <div class="container">
     <div class="rdv-wrapper">
       <div class="rdv-info">
         <div class="section-tag">Contact</div>
-        <h2>Rendez-vous</h2>
-        <p class="section-sub">Remplissez le formulaire, nous vous recontactons sous 24h.</p>
+        <h2>Demande de devis</h2>
+        <p class="section-sub">Décrivez votre panne, nous vous recontactons sous 24h avec un devis gratuit.</p>
         <h3>Nous contacter</h3>
         <div class="contact-item">
           <span class="contact-icon">📞</span>
