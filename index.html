@@ -126,10 +126,16 @@
       border: 1px solid #e5e5e5; border-radius: 10px; overflow: hidden;
     }
     .service-card {
-      background: #fff; padding: 1.8rem;
+      background: #fff;
       transition: background .2s;
+      overflow: hidden;
     }
     .service-card:hover { background: #fafafa; }
+    .service-img {
+      width: 100%; height: 160px;
+      object-fit: cover; display: block;
+    }
+    .service-card-body { padding: 1.5rem; }
     .service-icon { font-size: 1.8rem; margin-bottom: 1rem; }
     .service-card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.4rem; }
     .service-card p { font-size: 0.85rem; color: #666; line-height: 1.6; }
@@ -277,35 +283,47 @@
     <p class="section-sub">Diagnostic gratuit, devis transparent avant toute intervention. Pièces de qualité et garantie incluse.</p>
     <div class="services-grid">
       <div class="service-card">
-        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="17" r="1"/></svg></div>
-        <h3>Smartphones</h3>
-        <p>Écran, batterie, caméra, haut-parleur, connecteur de charge…</p>
-        <div class="service-tags">
-          <span class="tag">iPhone</span><span class="tag">Samsung</span><span class="tag">Xiaomi</span><span class="tag">Huawei</span>
+        <img src="https://raw.githubusercontent.com/MobileKare/mobilekare.fr/main/smartphone.jpg" alt="Réparation smartphone" class="service-img">
+        <div class="service-card-body">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="17" r="1"/></svg></div>
+          <h3>Smartphones</h3>
+          <p>Écran, batterie, caméra, haut-parleur, connecteur de charge…</p>
+          <div class="service-tags">
+            <span class="tag">iPhone</span><span class="tag">Samsung</span><span class="tag">Xiaomi</span><span class="tag">Huawei</span>
+          </div>
         </div>
       </div>
       <div class="service-card">
-        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="2" width="18" height="20" rx="2"/><circle cx="12" cy="17.5" r="0.8" fill="#2563eb"/><line x1="7" y1="6" x2="17" y2="6"/></svg></div>
-        <h3>Tablettes</h3>
-        <p>Écran, batterie, connecteur USB, vitre tactile, logiciel…</p>
-        <div class="service-tags">
-          <span class="tag">iPad</span><span class="tag">Samsung Tab</span><span class="tag">Lenovo</span>
+        <img src="https://raw.githubusercontent.com/MobileKare/mobilekare.fr/main/tablette.jpg" alt="Réparation tablette" class="service-img">
+        <div class="service-card-body">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="2" width="18" height="20" rx="2"/><circle cx="12" cy="17.5" r="0.8" fill="#2563eb"/><line x1="7" y1="6" x2="17" y2="6"/></svg></div>
+          <h3>Tablettes</h3>
+          <p>Écran, batterie, connecteur USB, vitre tactile, logiciel…</p>
+          <div class="service-tags">
+            <span class="tag">iPad</span><span class="tag">Samsung Tab</span><span class="tag">Lenovo</span>
+          </div>
         </div>
       </div>
       <div class="service-card">
-        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="5" width="10" height="14" rx="3"/><line x1="9" y1="2" x2="15" y2="2"/><line x1="9" y1="22" x2="15" y2="22"/><line x1="12" y1="9" x2="12" y2="12"/><line x1="12" y1="12" x2="14" y2="12"/></svg></div>
-        <h3>Montres connectées</h3>
-        <p>Écran, bracelet, batterie, capteurs, problèmes de charge…</p>
-        <div class="service-tags">
-          <span class="tag">Apple Watch</span><span class="tag">Galaxy Watch</span><span class="tag">Garmin</span>
+        <img src="https://raw.githubusercontent.com/MobileKare/mobilekare.fr/main/montre.jpg" alt="Réparation montre connectée" class="service-img">
+        <div class="service-card-body">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="5" width="10" height="14" rx="3"/><line x1="9" y1="2" x2="15" y2="2"/><line x1="9" y1="22" x2="15" y2="22"/><line x1="12" y1="9" x2="12" y2="12"/><line x1="12" y1="12" x2="14" y2="12"/></svg></div>
+          <h3>Montres connectées</h3>
+          <p>Écran, bracelet, batterie, capteurs, problèmes de charge…</p>
+          <div class="service-tags">
+            <span class="tag">Apple Watch</span><span class="tag">Galaxy Watch</span><span class="tag">Garmin</span>
+          </div>
         </div>
       </div>
       <div class="service-card">
-        <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="10" rx="3"/><line x1="8" y1="12" x2="8" y2="12"/><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><circle cx="16" cy="11" r="0.8" fill="#2563eb"/><circle cx="18" cy="13" r="0.8" fill="#2563eb"/></svg></div>
-        <h3>Consoles de jeux</h3>
-        <p>Lecteur optique, joystick drift, ventilateur, surchauffe…</p>
-        <div class="service-tags">
-          <span class="tag">PS4/PS5</span><span class="tag">Xbox</span><span class="tag">Switch</span>
+        <img src="https://raw.githubusercontent.com/MobileKare/mobilekare.fr/main/console.jpg" alt="Réparation console de jeux" class="service-img">
+        <div class="service-card-body">
+          <div class="service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="10" rx="3"/><line x1="8" y1="12" x2="8" y2="12"/><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><circle cx="16" cy="11" r="0.8" fill="#2563eb"/><circle cx="18" cy="13" r="0.8" fill="#2563eb"/></svg></div>
+          <h3>Consoles de jeux</h3>
+          <p>Lecteur optique, joystick drift, ventilateur, surchauffe…</p>
+          <div class="service-tags">
+            <span class="tag">PS4/PS5</span><span class="tag">Xbox</span><span class="tag">Switch</span>
+          </div>
         </div>
       </div>
     </div>
