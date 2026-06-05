@@ -433,30 +433,31 @@
 
       <div class="form-card">
         <form id="rdvForm" action="https://formspree.io/f/xzdqzewy" method="POST">
-          <input type="hidden" name="_subject" value="Nouvelle demande de rendez-vous MobileKare">
+          <input type="hidden" name="_subject" value="Nouveau devis MobileKare">
+          <input type="hidden" name="_format" value="plain">
           <div class="form-row">
             <div class="form-group">
               <label>Prénom *</label>
-              <input type="text" name="prenom" placeholder="Jean" required>
+              <input type="text" name="Prénom" placeholder="Jean" required>
             </div>
             <div class="form-group">
               <label>Nom *</label>
-              <input type="text" name="nom" placeholder="Dupont" required>
+              <input type="text" name="Nom" placeholder="Dupont" required>
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
               <label>Téléphone *</label>
-              <input type="tel" name="telephone" placeholder="06 00 00 00 00" required>
+              <input type="tel" name="Téléphone" placeholder="06 00 00 00 00" required>
             </div>
             <div class="form-group">
               <label>Email</label>
-              <input type="email" name="email" placeholder="jean@exemple.fr">
+              <input type="email" name="Email" placeholder="jean@exemple.fr">
             </div>
           </div>
           <div class="form-group">
             <label>Appareil *</label>
-            <select name="appareil" required>
+            <select name="Appareil" required>
               <option value="">-- Choisissez --</option>
               <option>Smartphone</option>
               <option>Tablette</option>
@@ -468,11 +469,11 @@
           <div class="form-row">
             <div class="form-group">
               <label>Marque / Modèle</label>
-              <input type="text" name="modele" placeholder="Ex : iPhone 14">
+              <input type="text" name="Modèle" placeholder="Ex : iPhone 14">
             </div>
             <div class="form-group">
               <label>Type d'intervention *</label>
-              <select name="intervention" required>
+              <select name="Intervention" required>
                 <option value="">-- Choisissez --</option>
                 <option>À domicile</option>
                 <option>Dépôt en atelier</option>
@@ -482,7 +483,7 @@
           </div>
           <div class="form-group">
             <label>Description de la panne *</label>
-            <textarea name="panne" placeholder="Décrivez le problème…" required></textarea>
+            <textarea name="Panne" placeholder="Décrivez le problème…" required></textarea>
           </div>
           <button type="submit" class="form-submit">Envoyer ma demande</button>
         </form>
