@@ -227,6 +227,18 @@
     }
     footer .logo { display: inline-block; margin-bottom: 0.5rem; }
     footer p { color: #999; font-size: 0.8rem; }
+    .call-btn {
+      position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 200;
+      background: #16a34a; color: #fff;
+      padding: 0.9rem 1.4rem; border-radius: 50px;
+      text-decoration: none; font-size: 0.95rem; font-weight: 600;
+      box-shadow: 0 4px 15px rgba(22,163,74,0.4);
+      align-items: center; gap: 0.5rem;
+      transition: transform .2s, box-shadow .2s;
+      display: none;
+    }
+    .call-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(22,163,74,0.5); }
+    @media (max-width: 768px) { .call-btn { display: flex; } }
 
     .hamburger {
       display: none; flex-direction: column; gap: 5px;
@@ -485,6 +497,12 @@
 </section>
 
 <!-- FOOTER -->
+<!-- BOUTON APPEL FLOTTANT -->
+<a href="tel:0667259146" class="call-btn">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  Appeler
+</a>
+
 <footer>
   <a href="index.html"><img src="https://raw.githubusercontent.com/MobileKare/mobilekare.fr/main/Logo.png" alt="MobileKare" style="height:72px;"></a>
   <p>© 2026 MobileKare · Réparation à domicile & en atelier · Villeneuve-de-Marsan</p>
