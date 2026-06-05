@@ -50,9 +50,18 @@
       min-height: 100vh;
       display: flex; align-items: center;
       padding: 8rem 2rem 4rem;
-      max-width: 1000px; margin: 0 auto;
+      position: relative; overflow: hidden;
+      background: url('https://raw.githubusercontent.com/MobileKare/mobilekare.fr/main/hero.jpg') center/cover no-repeat;
     }
-    .hero-content { max-width: 620px; }
+    #accueil::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: rgba(255,255,255,0.88);
+    }
+    .hero-wrap {
+      position: relative; z-index: 1;
+      max-width: 1100px; margin: 0 auto; width: 100%;
+    }
     .hero-tag {
       display: inline-block;
       font-size: 0.8rem; color: #2563eb;
@@ -211,6 +220,7 @@
       nav { padding: 1rem; min-height: 60px; }
       nav > a:first-child { position: absolute; left: 50%; transform: translateX(-50%); }
       nav > a:first-child img { height: 35px; }
+      .hero-wrap { max-width: 100%; }
       .zone-wrapper, .rdv-wrapper { grid-template-columns: 1fr; gap: 2rem; }
       .form-row { grid-template-columns: 1fr; }
       .hero-stats { gap: 1.5rem; }
@@ -232,26 +242,28 @@
 
 <!-- HERO -->
 <section id="accueil">
-  <div class="hero-content">
-    <div class="hero-tag">Réparation à domicile & en atelier</div>
-    <h1>Vos appareils<br>réparés rapidement</h1>
-    <p class="hero-sub">Téléphones, tablettes, montres connectées et consoles de jeux. Intervention à domicile ou dépôt en atelier à Villeneuve-de-Marsan.</p>
-    <div class="hero-btns">
-      <a href="#rendez-vous" class="btn-dark">Prendre rendez-vous</a>
-      <a href="#services" class="btn-outline">Nos services</a>
-    </div>
-    <div class="hero-stats">
-      <div>
-        <div class="stat-num">500+</div>
-        <div class="stat-label">Appareils réparés</div>
+  <div class="hero-wrap">
+    <div class="hero-content">
+      <div class="hero-tag">Réparation à domicile & en atelier</div>
+      <h1>Vos appareils<br>réparés rapidement</h1>
+      <p class="hero-sub">Téléphones, tablettes, montres connectées et consoles de jeux. Intervention à domicile ou dépôt en atelier à Villeneuve-de-Marsan.</p>
+      <div class="hero-btns">
+        <a href="#rendez-vous" class="btn-dark">Prendre rendez-vous</a>
+        <a href="#services" class="btn-outline">Nos services</a>
       </div>
-      <div>
-        <div class="stat-num">24h</div>
-        <div class="stat-label">Délai moyen</div>
-      </div>
-      <div>
-        <div class="stat-num">30 km</div>
-        <div class="stat-label">Zone d'intervention</div>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-num">500+</div>
+          <div class="stat-label">Appareils réparés</div>
+        </div>
+        <div>
+          <div class="stat-num">24h</div>
+          <div class="stat-label">Délai moyen</div>
+        </div>
+        <div>
+          <div class="stat-num">30 km</div>
+          <div class="stat-label">Zone d'intervention</div>
+        </div>
       </div>
     </div>
   </div>
