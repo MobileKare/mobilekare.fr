@@ -130,7 +130,7 @@
     .section-sub { color: #666; max-width: 500px; margin-bottom: 2.5rem; font-size: 0.95rem; }
 
     /* SERVICES */
-    #services { background: #f8f8f8; }
+    #services { background: #fafafa; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -153,7 +153,7 @@
     }
 
     /* ZONE */
-    #zone { background: #fff; }
+    #zone { background: #fff; border-bottom: 1px solid #eee; }
     .zone-wrapper {
       display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;
     }
@@ -177,7 +177,7 @@
     .zone-visual p { font-size: 0.85rem; color: #888; }
 
     /* RDV */
-    #devis { background: #f8f8f8; }
+    #devis { background: #f0f4ff; border-top: 1px solid #dde6ff; }
     .rdv-wrapper {
       display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: start;
     }
@@ -284,8 +284,8 @@
   <a href="#accueil"><img src="https://raw.githubusercontent.com/MobileKare/mobilekare.fr/main/Logo.png" alt="MobileKare" style="height:75px;"></a>
   <ul>
     <li><a href="#accueil">Accueil</a></li>
-    <li><a href="#services">Services</a></li>
     <li><a href="#comment-ca-marche">Comment ça marche</a></li>
+    <li><a href="#services">Services</a></li>
     <li><a href="#zone">Zone</a></li>
     <li><a href="#devis" class="nav-cta">Devis</a></li>
   </ul>
@@ -297,8 +297,8 @@
 <!-- MENU MOBILE -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="#accueil" class="mobile-link">Accueil</a>
-  <a href="#services" class="mobile-link">Services</a>
   <a href="#comment-ca-marche" class="mobile-link">Comment ça marche</a>
+  <a href="#services" class="mobile-link">Services</a>
   <a href="#zone" class="mobile-link">Zone d'intervention</a>
   <a href="#devis" class="mobile-link mobile-cta">Devis</a>
 </div>
@@ -327,6 +327,34 @@
           <div class="stat-num">30 km</div>
           <div class="stat-label">Zone d'intervention</div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMENT ÇA MARCHE -->
+<section id="comment-ca-marche" style="background:#f8f9ff; border-top:1px solid #eee; border-bottom:1px solid #eee; padding:5rem 2.5rem;">
+  <div class="container">
+    <div class="section-tag">Simple & rapide</div>
+    <h2>Comment ça marche ?</h2>
+    <p class="section-sub">En 3 étapes simples, votre appareil est réparé.</p>
+    <div class="steps-grid" style="display:grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap:0; margin-top:1rem; align-items:center;">
+      <div style="text-align:center; padding:2rem 1.5rem; background:#f8f9ff; border-radius:12px;">
+        <div style="width:50px; height:50px; background:#2563eb; color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.3rem; font-weight:700; margin:0 auto 1rem;">1</div>
+        <h3 style="font-size:1rem; font-weight:600; margin-bottom:0.5rem;">Demandez un devis</h3>
+        <p style="font-size:0.85rem; color:#666;">Remplissez le formulaire ou appelez-nous. Gratuit et sans engagement.</p>
+      </div>
+      <div class="step-arrow" style="text-align:center; font-size:1.8rem; color:#2563eb; padding:0 1rem;">→</div>
+      <div style="text-align:center; padding:2rem 1.5rem; background:#f8f9ff; border-radius:12px;">
+        <div style="width:50px; height:50px; background:#2563eb; color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.3rem; font-weight:700; margin:0 auto 1rem;">2</div>
+        <h3 style="font-size:1rem; font-weight:600; margin-bottom:0.5rem;">On intervient</h3>
+        <p style="font-size:0.85rem; color:#666;">À domicile ou en dépôt à l'atelier selon votre préférence.</p>
+      </div>
+      <div class="step-arrow" style="text-align:center; font-size:1.8rem; color:#2563eb; padding:0 1rem;">→</div>
+      <div style="text-align:center; padding:2rem 1.5rem; background:#f8f9ff; border-radius:12px;">
+        <div style="width:50px; height:50px; background:#2563eb; color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.3rem; font-weight:700; margin:0 auto 1rem;">3</div>
+        <h3 style="font-size:1rem; font-weight:600; margin-bottom:0.5rem;">Appareil réparé ✅</h3>
+        <p style="font-size:0.85rem; color:#666;">Votre appareil est réparé, testé et garanti. Vos données sont intactes.</p>
       </div>
     </div>
   </div>
@@ -370,34 +398,6 @@
         <div class="service-tags">
           <span class="tag">PS4/PS5</span><span class="tag">Xbox</span><span class="tag">Switch</span>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- COMMENT ÇA MARCHE -->
-<section id="comment-ca-marche" style="background:#fff; padding:5rem 2.5rem;">
-  <div class="container">
-    <div class="section-tag">Simple & rapide</div>
-    <h2>Comment ça marche ?</h2>
-    <p class="section-sub">En 3 étapes simples, votre appareil est réparé.</p>
-    <div class="steps-grid" style="display:grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap:0; margin-top:1rem; align-items:center;">
-      <div style="text-align:center; padding:2rem 1.5rem; background:#f8f9ff; border-radius:12px;">
-        <div style="width:50px; height:50px; background:#2563eb; color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.3rem; font-weight:700; margin:0 auto 1rem;">1</div>
-        <h3 style="font-size:1rem; font-weight:600; margin-bottom:0.5rem;">Demandez un devis</h3>
-        <p style="font-size:0.85rem; color:#666;">Remplissez le formulaire ou appelez-nous. Gratuit et sans engagement.</p>
-      </div>
-      <div class="step-arrow" style="text-align:center; font-size:1.8rem; color:#2563eb; padding:0 1rem;">→</div>
-      <div style="text-align:center; padding:2rem 1.5rem; background:#f8f9ff; border-radius:12px;">
-        <div style="width:50px; height:50px; background:#2563eb; color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.3rem; font-weight:700; margin:0 auto 1rem;">2</div>
-        <h3 style="font-size:1rem; font-weight:600; margin-bottom:0.5rem;">On intervient</h3>
-        <p style="font-size:0.85rem; color:#666;">À domicile ou en dépôt à l'atelier selon votre préférence.</p>
-      </div>
-      <div class="step-arrow" style="text-align:center; font-size:1.8rem; color:#2563eb; padding:0 1rem;">→</div>
-      <div style="text-align:center; padding:2rem 1.5rem; background:#f8f9ff; border-radius:12px;">
-        <div style="width:50px; height:50px; background:#2563eb; color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.3rem; font-weight:700; margin:0 auto 1rem;">3</div>
-        <h3 style="font-size:1rem; font-weight:600; margin-bottom:0.5rem;">Appareil réparé ✅</h3>
-        <p style="font-size:0.85rem; color:#666;">Votre appareil est réparé, testé et garanti. Vos données sont intactes.</p>
       </div>
     </div>
   </div>
