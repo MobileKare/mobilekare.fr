@@ -539,7 +539,7 @@
 
 <footer>
   <a href="index.html"><img src="https://raw.githubusercontent.com/MobileKare/mobilekare.fr/main/Logo.png" alt="MobileKare" style="height:72px;"></a>
-  <p>© 2026 MobileKare · Réparation à domicile & en atelier · Villeneuve-de-Marsan</p>
+  <p>© <span id="year"></span> MobileKare · Réparation à domicile & en atelier · Villeneuve-de-Marsan</p>
   <div style="display:flex; justify-content:center; gap:1.2rem; margin-top:1rem;">
     <a href="https://www.facebook.com/people/MobileKare/61578340607294/" target="_blank" title="Facebook" style="color:#555; transition:color .2s;" onmouseover="this.style.color='#1877f2'" onmouseout="this.style.color='#555'">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
@@ -555,7 +555,7 @@
 </footer>
 
 <script>
-  // Hamburger menu
+  document.getElementById('year').textContent = new Date().getFullYear();
   var hamburger = document.getElementById('hamburger');
   var mobileMenu = document.getElementById('mobileMenu');
   hamburger.addEventListener('click', function() {
